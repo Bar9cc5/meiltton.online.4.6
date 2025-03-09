@@ -1,0 +1,148 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav {
+  display: flex;
+}
+.nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.nav a:hover {
+  color: rgb(187, 144, 88);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #ffffff;
+  }
+  .nav.active {
+      display: flex;
+  }
+  .menu-icon {
+      display: block;
+      font-size: 24px;
+  }
+}
+
+
+
+.portfolio h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+.portfolio p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+} 
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.portfolio-item {
+  margin: 15px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 300px; /* Ширина изображения */
+  height: auto; /* Высота автоматически */
+  border-radius: 8px; /* Закругление углов */
+  transition: transform 0.3s; /* Эффект при наведении */
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+/* Стили для ссылки "Заказать" */
+.order-link {
+  display: inline-block; /* Позволяет добавлять отступы */
+  margin-top: 10px; /* Отступ сверху */
+  padding: 10px 20px; /* Внутренние отступы */
+  background-color: rgb(187, 144, 88); /* Цвет фона */
+  color: white; /* Цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  border-radius: 5px; /* Закругление углов кнопки */
+  transition: background-color 0.3s, transform 0.3s; /* Эффекты при наведении */
+}
+
+.order-link:hover {
+  background-color: rgba(187, 144, 88, 0.692);/* Темный цвет фона при наведении */
+  transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Уменьшаем размер лого для мобильных устройств */
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav a {
+    padding: 10px; /* Уменьшаем отступы у ссылок в навигации */
+    font-size: 14px; /* Уменьшаем размер шрифта ссылок в навигации */
+  }
+
+  .portfolio h1 {
+    font-size: 25px; /* Уменьшаем размер заголовка для мобильных устройств */
+  }
+
+  .portfolio p {
+    font-size: 16px; /* Уменьшаем размер текста для мобильных устройств */
+  }
+
+  .portfolio-item img {
+    width: 200px; /* Уменьшаем ширину изображений на мобильных устройствах */
+  }
+
+  .order-link {
+    padding: 8px 16px; /* Уменьшаем внутренние отступы кнопки */
+    font-size: 14px; /* Уменьшаем размер текста кнопки */
+  }
+}
